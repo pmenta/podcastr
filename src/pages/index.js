@@ -9,8 +9,13 @@ import { ptBR } from 'date-fns/locale'
 import { convertDurationToTimeDescription } from '../utils/convertDurationToTimeString'
 
 import styles from './home.module.scss'
+import { useContext } from 'react'
+import { PlayerContext } from '../contexts/PlayerContext'
 
 export default function Home({latestEpisodes, allEpisodes}) {
+
+  const { play } = useContext(PlayerContext)
+
   return (
     <div className={styles.homepage}>
       <section className={styles.latestEpisodes}>
@@ -35,7 +40,7 @@ export default function Home({latestEpisodes, allEpisodes}) {
                   <span>{episode.durationAsString}</span>
                 </div>
 
-                <button type='button'>
+                <button type='button' onClick={() => play(episode)}>
                   <img src='/play-green.svg' alt='Tocar'/>
                 </button>
 
@@ -112,7 +117,7 @@ export async function getStaticProps() {
         duration: Number(episode.file.duration),
         durationAsString: convertDurationToTimeDescription(Number(episode.file.duration)),
         description: episode.description,
-        file: episode.file.url,
+        url: episode.file.url,
         thumbnail: episode.thumbnail
       }
     })

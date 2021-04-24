@@ -11,7 +11,6 @@ import { convertDurationToTimeDescription } from '../../utils/convertDurationToT
 
 export default function episode({ episode }) {
 
-
     return (
         <div className={styles.episode}>
             <div className={styles.thumbnailContainer}>
@@ -50,7 +49,6 @@ export const getStaticPaths = async () => {
     }
 }
 
-
 export const getStaticProps = async (context) => {
 
     const { slug } = context.params
@@ -65,7 +63,7 @@ export const getStaticProps = async (context) => {
         duration: Number(data.file.duration),
         durationAsString: convertDurationToTimeDescription(Number(data.file.duration)),
         description: data.description,
-        file: data.file.url,
+        url: data.file.url,
         thumbnail: data.thumbnail
       }
 
