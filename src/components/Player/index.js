@@ -17,7 +17,7 @@ export function Player() {
 
     const [progress, setProgress] = useState(0)
 
-    const { episodeList, currentEpisodeIndex, isPlaying, togglePlay, setPlayingState, playNext, playPrevious, hasNext, hasPrevious, isLooping, toggleLoop, toggleShuffle, isShuffling, clearPlayerState } = useContext(PlayerContext)
+    const { episodeList, currentEpisodeIndex, isPlaying, togglePlay, setPlayingState, playNext, playPrevious, hasNext, hasPrevious, isLooping, toggleLoop, toggleShuffle, isShuffling, clearPlayerState, isDark } = useContext(PlayerContext)
 
     useEffect(() => {
         if (!audioRef.current) {
@@ -58,7 +58,7 @@ export function Player() {
 
     return (
 
-        <div className={styles.playerContainer}>
+        <div className={isDark ? styles.playerContainerDark : styles.playerContainer}>
             <header>
                 <img src='/playing.svg' alt='Tocando agora'/>
                 <strong>Tocando agora</strong>

@@ -7,6 +7,7 @@
 }
 
 :root {
+
     --white: #FFF;
   
     --gray-50: #F7F8FA;
@@ -21,6 +22,14 @@
     --purple-400: #9164FA; 
     --purple-500: #8257E5;
     --purple-800: #6F48C9;
+
+
+    --dark-comment: #483C67;
+    --dark-foreground: #E1E1E6;
+    --dark-300: #41414D;
+    --dark-500: #44475a;
+    --dark-800: #191622;
+
   }
 
 // ACESSIBILIDADE
@@ -42,7 +51,6 @@
 body {
     background-color: var(--gray-50);
 }
-
 body, input, textarea, button {
     font: 500 1rem Inter, sans-serif;
     color: var(--gray-500);
@@ -68,3 +76,25 @@ button {
 
  /* Notebooks */
  @media (max-width: 1366px) { html { font-size: 80%; } }
+
+
+ /* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--dark-comment) var(--dark-800);
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--gray-800);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--gray-500);
+    border-radius: 20px;
+    border: 3px solid var(--gray-800);
+  }

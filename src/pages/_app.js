@@ -16,6 +16,11 @@ function MyApp({ Component, pageProps }) {
   const [isLooping, setIsLooping] = useState(false)
   const [isShuffling, setIsShuffling] = useState(false)
 
+  const [isDark, setIsDark] = useState(false)
+
+  function toggleDarkMode() {
+    setIsDark(!isDark)
+  }
 
   function play(episode) {
     setEpisodeList([episode])
@@ -73,7 +78,7 @@ function MyApp({ Component, pageProps }) {
 
 
   return (
-    <PlayerContext.Provider value={{ episodeList, currentEpisodeIndex, play, isPlaying, isShuffling,isLooping, togglePlay,toggleShuffle ,setPlayingState, playList, playNext, playPrevious, hasNext, hasPrevious, toggleLoop, clearPlayerState }}>
+    <PlayerContext.Provider value={{ episodeList, currentEpisodeIndex, play, isPlaying, isShuffling,isLooping, togglePlay,toggleShuffle ,setPlayingState, playList, playNext, playPrevious, hasNext, hasPrevious, toggleLoop, clearPlayerState, isDark, toggleDarkMode }}>
       <div className={styles.wrapper}>
         <main>
           <Header></Header>

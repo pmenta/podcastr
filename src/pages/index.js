@@ -15,20 +15,20 @@ import { PlayerContext } from '../contexts/PlayerContext'
 
 export default function Home({latestEpisodes, allEpisodes}) {
 
-  const { playList } = useContext(PlayerContext)
+  const { playList, isDark } = useContext(PlayerContext)
 
   const episodeList = [...latestEpisodes, ...allEpisodes]
 
 
   return (
-    <div className={styles.homepage}>
+    <div className={isDark ? styles.homepageDark : styles.homepage}>
 
       <Head>
         <title>Home | Podcastr</title>
       </Head>
 
 
-      <section className={styles.latestEpisodes}>
+      <section className={isDark ? styles.latestEpisodesDark : styles.latestEpisodes}>
         <h2>Últimos lançamentos</h2>
         <ul>
           {latestEpisodes.map((episode, index) => {
@@ -59,7 +59,7 @@ export default function Home({latestEpisodes, allEpisodes}) {
           })}
         </ul>
       </section>
-      <section className={styles.allEpisodes}>
+      <section className={isDark ? styles.allEpisodesDark : styles.allEpisodes}>
           <h2>Todos episódios</h2>
 
           <table cellSpacing={0}> 

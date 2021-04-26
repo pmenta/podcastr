@@ -9,6 +9,8 @@
 
     border-bottom: 1px solid var(--gray-100);
 
+    transition: all ease 0.3s;
+
     p {
         margin-left: 2rem;
         padding: 0.25rem 0 0.25rem 2rem;
@@ -18,5 +20,73 @@
     span {
         margin-left: auto;
         text-transform: capitalize;
+        border-right: 1px solid var(--gray-100);
+        padding: 0.25rem 2rem 0.25rem 2rem;
+    }
+
+    .disabled {
+        display: none;
+    }
+
+    .toggleDark {
+        margin-left: 2rem;
+        transform: scale(0.7);
+
+        cursor: pointer;
+
+        transition: all ease 0.3s;
+
+        &:hover {
+            transform: scale(0.9);
+        }
+
+        
+    }
+}
+
+.headerContainerDark {
+    background: var(--dark-800);
+    height: 6.5;
+    
+    display: flex;
+    align-items: center;
+
+    padding: 2rem 4rem;
+
+    border-bottom: 1px solid var(--dark-100);
+    color: var(--dark-foreground);
+
+    transition: all ease 0.3s;
+
+    p {
+        margin-left: 2rem;
+        padding: 0.25rem 0 0.25rem 2rem;
+        border-left: 1px solid var(--gray-100);
+    }
+
+    span {
+        margin-left: auto;
+        text-transform: capitalize;
+        border-right: 1px solid var(--gray-100);
+        padding: 0.25rem 2rem 0.25rem 2rem;
+    }
+
+    .disabled {
+        display: none;
+    }
+
+    .toggleDark {
+        margin-left: 2rem;
+        transform: scale(0.7);
+
+        cursor: pointer;
+
+        transition: all ease 0.3s;
+
+        &:hover {
+            transform: scale(0.9);
+        }
+
+        
     }
 }
