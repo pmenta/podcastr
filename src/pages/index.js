@@ -34,12 +34,9 @@ export default function Home({latestEpisodes, allEpisodes}) {
           {latestEpisodes.map((episode, index) => {
             return (
               <li key={episode.id}>
-                <Image
-                  width={192} 
-                  height={192} 
+                <img className={styles.latestThumbnails}
                   src={episode.thumbnail} 
                   alt={episode.title} 
-                  objectFit='cover'
                 />
 
 
@@ -79,12 +76,9 @@ export default function Home({latestEpisodes, allEpisodes}) {
                 return (
                   <tr key={episode.id}>
                     <td style={{width: 72}}>
-                      <Image
-                        width={120}
-                        height={120}
+                      <img className={styles.allThumbnails}
                         src={episode.thumbnail}
                         alt={episode.title}
-                        objectFit='cover'
                       />
                     </td>
                     <td>

@@ -5,11 +5,26 @@
     max-width: 45rem;
     padding: 3rem 2rem;
     margin: 0 auto;
+
+
     .thumbnailContainer {
         position: relative;
 
+        .thumbnailImage {
+            width: 45rem;
+        }
+
+        .thumbnailImage img {
+            border-radius: 1rem;
+            width: 41rem;
+            height: 16rem;
+            object-fit: cover;
+            
+        }
+
         img {
             border-radius: 1rem;
+            max-width: 41rem;
         }
 
         button {
@@ -107,6 +122,20 @@
 
         img {
             border-radius: 1rem;
+        }
+
+        .thumbnailImage {
+            width: 45rem;
+           
+
+        }
+
+        .thumbnailImage img {
+            border-radius: 1rem;
+            width: 41rem;
+            height: 16rem;
+            object-fit: cover;
+            
         }
 
         button {

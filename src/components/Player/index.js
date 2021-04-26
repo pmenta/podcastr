@@ -66,7 +66,7 @@ export function Player() {
 
            { episode ? ( 
                 <div className={styles.currentEpisode}>
-                    <Image width={592} height={492} src={episode.thumbnail} objectFit='cover'/>
+                    <img src={episode.thumbnail} className={styles.thumbnail}/>
                     <strong>{episode.title}</strong>
                     <span>{episode.members}</span>
                 </div>
