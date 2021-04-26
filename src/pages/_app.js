@@ -13,6 +13,9 @@ function MyApp({ Component, pageProps }) {
   const [episodeList, setEpisodeList] = useState([])
   const [currentEpisodeIndex, setCurrentEpisodeIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
+  const [isLooping, setIsLooping] = useState(false)
+  const [isShuffling, setIsShuffling] = useState(false)
+
 
   function play(episode) {
     setEpisodeList([episode])
@@ -24,13 +27,53 @@ function MyApp({ Component, pageProps }) {
     setIsPlaying(!isPlaying)
   }
 
+  function toggleLoop() {
+    setIsLooping(!isLooping)
+  }
+
+  function toggleShuffle() {
+    setIsShuffling(!isShuffling)
+  }
+
+  function playList(list, index) {
+    setEpisodeList(list)
+    setCurrentEpisodeIndex(index)
+    setIsPlaying(true)
+  } 
+
   function setPlayingState(state) {
     setIsPlaying(state)
   }
 
+  const hasNext = isShuffling || (currentEpisodeIndex + 1) < episodeList.length
+  const hasPrevious = currentEpisodeIndex > 0
+
+
+  function playNext() {
+    if (isShuffling) { 
+      const nextRandomEpisodeIndex = Math.floor(Math.random() * episodeList.length)
+      setCurrentEpisodeIndex(nextRandomEpisodeIndex)
+    } else if (hasNext) {
+      setCurrentEpisodeIndex(currentEpisodeIndex + 1)
+    }
+  }
+
+  function playPrevious() {
+    if (hasPrevious) {
+      setCurrentEpisodeIndex(currentEpisodeIndex - 1)
+    }
+
+  }
+
+  function clearPlayerState() {
+    setEpisodeList([])
+    setCurrentEpisodeIndex(0)
+  }
+
+
 
   return (
-    <PlayerContext.Provider value={{ episodeList, currentEpisodeIndex, play, isPlaying, togglePlay, setPlayingState }}>
+    <PlayerContext.Provider value={{ episodeList, currentEpisodeIndex, play, isPlaying, isShuffling,isLooping, togglePlay,toggleShuffle ,setPlayingState, playList, playNext, playPrevious, hasNext, hasPrevious, toggleLoop, clearPlayerState }}>
       <div className={styles.wrapper}>
         <main>
           <Header></Header>
