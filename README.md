@@ -28,6 +28,6 @@ Nós usamos o Next.js para gerar as páginas estaticamente. A home é gerada est
     <img src="assets/preview-1.png" alt="Tela principal, sem podcast tocando">
     <p>(Página inicial, sem podcast selecionado)</p>
     <img src="assets/preview-3.png" alt="Tela principal, sem podcast tocando">
-    <p>(Página com detalhe do episódio)</p>
+    <p>(Página do episódio)</p>
 </div>
 
