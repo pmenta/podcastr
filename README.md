@@ -1,6 +1,7 @@
 <div align="center">
     <h1> Podcastr - NLW#5 - Trilha ReactJS</h1>
     <img src="public/logo.svg" alt="Tela principal, sem podcast tocando">
+    <img src="assets/preview-2.png" alt="Tela principal, sem podcast tocando">
 </div>
 
 # Projeto
@@ -26,8 +27,6 @@ Nós usamos o Next.js para gerar as páginas estaticamente. A home é gerada est
 <div align="center">
     <img src="assets/preview-1.png" alt="Tela principal, sem podcast tocando">
     <p>(Página inicial, sem podcast selecionado)</p>
-    <img src="assets/preview-2.png" alt="Tela principal, sem podcast tocando">
-    <p>(Página inicial, com podcast tocando e opções shuffle e repeat ativadas)</p>
     <img src="assets/preview-3.png" alt="Tela principal, sem podcast tocando">
     <p>(Página com detalhe do episódio)</p>
 </div>
