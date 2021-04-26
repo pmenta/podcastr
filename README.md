@@ -2,7 +2,7 @@
     <h1> Podcastr - NLW#5 - Trilha ReactJS</h1>
     <img src="public/logo.svg" alt="Logo"> <hr>
     <img src="assets/preview-2.png" alt="Tela principal, sem podcast tocando">
-    <button><a href='https://podcastr-kohl.vercel.app/'>Teste a aplicação</a></button>
+    <h2><a href='https://podcastr-kohl.vercel.app/'>Teste a aplicação</a></h2>
 </div>
 
 
