@@ -14,10 +14,10 @@ import { PlayerContext } from '../../contexts/PlayerContext'
 
 export default function episode({ episode }) {
 
-    const { play } = useContext(PlayerContext)
+    const { play, isDark } = useContext(PlayerContext)
 
     return (
-        <div className={styles.episode}>
+        <div className={isDark ? styles.episodeDark : styles.episode }>
 
             <Head>
                 <title>{episode.title} | Podcastr</title>

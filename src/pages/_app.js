@@ -80,7 +80,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <PlayerContext.Provider value={{ episodeList, currentEpisodeIndex, play, isPlaying, isShuffling,isLooping, togglePlay,toggleShuffle ,setPlayingState, playList, playNext, playPrevious, hasNext, hasPrevious, toggleLoop, clearPlayerState, isDark, toggleDarkMode }}>
       <div className={styles.wrapper}>
-        <main>
+        <main style={isDark ? {backgroundColor: '#44475a', transition: 'All Ease 0.3s'} : {backgroundColor: '#F7F8FA', transition: 'All Ease 0.3s'}}>
           <Header></Header>
           <Component {...pageProps} />
         </main>
