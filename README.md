@@ -9,20 +9,19 @@
 
 # Projeto
 
-Projeto desenvolvido durante a trilha de React.js na NextLevelWeek5, da [Rocketseat](https://rocketseat.com.br/).
+This is a project developed during the Next Level Week, presented by @Rocketseat.
 
-O Podcastr é uma aplicação para o podcast FalaDev, da Rocketseat. Temos o player que conta com funcionalidades de loop, embaralhar lista de reprodução, avançar na lista e voltar.
+Podcastr is an application for Rocketseat's FalaDev podcast. We have the player that has looping, shuffling playlist, forward in the list and back functionality.
 
-Nós usamos o Next.js para gerar as páginas estaticamente. A home é gerada estaticamente e as páginas dos episódios são geradas como páginas dinâmicas estáticas, páginas que não são geradas estaticamente na hora da build, mas assim que alguém entra na página e ela realiza as requisições, a página é armazenada como estática.
+We use Next.js to generate the pages statically. The home is statically generated and the episodes pages are generated as static dynamic pages, pages that are not statically generated at build time, but as soon as someone enters the page and it makes requests, the page is stored as static.
 
-Eu fui um pouco além e implementei algumas features que não foram desenvolvidas durante a NLW, são elas:
+I went further and implemented:
 
 - Dark Mode
 - Theme Switcher
 - Progressive Web App (PWA)
 
-
-## Tecnologias e linguagens usadas
+## Used techs:
 
 - React
 - Next.js
@@ -37,12 +36,12 @@ Eu fui um pouco além e implementei algumas features que não foram desenvolvida
 
 <div align="center">
     <img src="assets/preview-1.png" alt="Tela principal, sem podcast tocando">
-    <p>(Página inicial, sem podcast selecionado)</p>
+    <p>(Homepage, without selected podcast)</p>
     <img src="assets/preview-3.png" alt="Tela principal, sem podcast tocando">
-    <p>(Página do episódio)</p>
+    <p>(Episode page)</p>
     <img src='assets/preview-4.png' alt='Tela principal com DarkMode'>
-    <p>(Apresentação do Dark Mode)</p>
+    <p>(Dark Mode)</p>
     <img src='assets/pwa-preview.gif' alt='Apresentação da PWA'>
-    <p>(Apresentação da PWA)</p>
+    <p>(PWA Presentation)</p>
 </div>
 
